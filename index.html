@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="es" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Portfolio - Product Developer</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script src="https://unpkg.com/lucide@latest"></script>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        darkBg: '#0B0B0C',
+                        softGray: '#8E8E93',
+                    }
+                }
+            }
+        }
+    </script>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap');
+        body { font-family: 'Inter', sans-serif; }
+    </style>
+</head>
+<body class="bg-[#0B0B0C] text-white antialiased relative min-h-screen">
+
+    <!-- Luz de fondo sutil -->
+    <div class="absolute top-0 left-1/2 -translate-x-1/2 w-[500px] h-[250px] bg-emerald-500/10 blur-[120px] rounded-full pointer-events-none z-0"></div>
+
+    <!-- NAVBAR -->
+    <nav class="sticky top-0 z-50 w-full border-b border-white/[0.06] bg-[#0B0B0C]/70 backdrop-blur-md">
+        <div class="mx-auto flex max-w-6xl items-center justify-between px-6 h-16">
+            <a href="#" class="font-medium text-white tracking-tight hover:opacity-80 transition-opacity">
+                flowgrid<span class="text-emerald-400">.</span>
+            </a>
+            <div class="hidden md:flex items-center gap-8 text-sm text-[#8E8E93]">
+                <a href="#about" class="hover:text-white transition-colors">About</a>
+                <a href="#process" class="hover:text-white transition-colors">Process</a>
+                <a href="#stack" class="hover:text-white transition-colors">Stack</a>
+            </div>
+            <div class="flex items-center gap-4 text-[#8E8E93]">
+                <a href="#" class="hover:text-white"><i data-lucide="github" class="w-5 h-5"></i></a>
+                <a href="#" class="hover:text-white"><i data-lucide="linkedin" class="w-5 h-5"></i></a>
+            </div>
+        </div>
+    </nav>
+
+    <main class="relative z-10 pb-32">
+        <!-- HERO -->
+        <section class="relative mx-auto max-w-4xl px-6 pt-32 pb-24 text-center flex flex-col items-center">
+            <div class="inline-flex items-center gap-2 rounded-full border border-emerald-500/30 bg-emerald-500/5 px-3.5 py-1 text-xs font-medium text-emerald-400 mb-6 backdrop-blur-sm">
+                <span class="relative flex h-2 w-2">
+                    <span class="animate-ping absolute inline-flex h-full w-full rounded-full bg-emerald-400 opacity-75"></span>
+                    <span class="relative inline-flex rounded-full h-2 w-2 bg-emerald-500"></span>
+                </span>
+                Available for new projects
+            </div>
+            <h1 class="text-4xl font-semibold tracking-tight text-white sm:text-6xl max-w-3xl leading-[1.1]">
+                Building digital products with code and experience design.
+            </h1>
+            <p class="mt-6 text-lg text-[#8E8E93] max-w-xl font-light leading-relaxed">
+                I'm a <span class="text-white font-normal">Full-Stack Developer & UX Designer</span>. I bridge the gap between complex engineering and refined interface design.
+            </p>
+            <div class="mt-10 flex flex-col sm:flex-row items-center gap-4 w-full sm:w-auto">
+                <a href="#about" class="flex items-center justify-center gap-2 w-full sm:w-auto rounded-xl bg-white px-5 py-3 text-sm font-medium text-black hover:bg-neutral-200 transition-all duration-300 transform hover:scale-[1.02]">
+                    View Work
+                </a>
+                <a href="#" class="flex items-center justify-center gap-2 w-full sm:w-auto rounded-xl border border-white/[0.08] bg-white/[0.02] px-5 py-3 text-sm font-medium text-white hover:bg-white/[0.06] transition-all duration-300">
+                    Let's talk <i data-lucide="arrow-up-right" class="w-4 h-4 text-[#8E8E93]"></i>
+                </a>
+            </div>
+        </section>
+
+        <!-- ABOUT (Bento Grid) -->
+        <section id="about" class="mx-auto max-w-6xl px-6 py-20 border-t border-white/[0.06]">
+            <div class="mb-12">
+                <span class="text-xs font-mono uppercase tracking-widest text-[#8E8E93]">01 / Identity</span>
+                <h2 className="text-2xl font-medium text-white mt-2">About Me</h2>
+            </div>
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-4">
+                <div class="md:col-span-2 rounded-2xl border border-white/[0.06] bg-white/[0.01] p-8 flex flex-col justify-between">
+                    <div>
+                        <h3 class="text-lg font-medium text-white mb-4">My Philosophy</h3>
+                        <p class="text-sm text-[#8E8E93] leading-relaxed mb-4">
+                            I evolved into software architecture from a visual and interactive layout foundation. This unusual path allows me to build production-ready applications without losing pixel-perfect aesthetic precision.
+                        </p>
+                    </div>
+                    <div class="mt-8 pt-6 border-t border-white/[0.04] text-xs text-[#8E8E93] font-mono">FOCUS // HYBRID DEVELOPMENT</div>
+                </div>
+                <div class="rounded-2xl border border-white/[0.06] bg-white/[0.01] p-8 flex flex-col justify-between hover:border-white/[0.12] transition-colors duration-300">
+                    <div class="h-10 w-10 rounded-lg bg-white/[0.04] flex items-center justify-center text-white mb-6"><i data-lucide="layout"></i></div>
+                    <div>
+                        <h3 class="text-base font-medium text-white mb-2">User Experience</h3>
+                        <p class="text-sm text-[#8E8E93]">Wireframing, high-fidelity interactive prototyping, and unified tokenized design systems.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- PROCESS -->
+        <section id="process" class="mx-auto max-w-6xl px-6 py-20 border-t border-white/[0.06]">
+            <div class="mb-12">
+                <span class="text-xs font-mono uppercase tracking-widest text-[#8E8E93]">02 / Execution</span>
+                <h2 class="text-2xl font-medium text-white mt-2">The Process</h2>
+            </div>
+            <div class="grid grid-cols-1 md:grid-cols-4 gap-6">
+                <div class="p-6 rounded-2xl border border-white/[0.04] bg-white/[0.005]">
+                    <div class="text-xs font-mono text-emerald-400 mb-4">01</div>
+                    <h3 class="text-base font-medium text-white mb-2">Discover</h3>
+                    <p class="text-xs text-[#8E8E93]">Deep dive into business goals and target definition.</p>
+                </div>
+                <div class="p-6 rounded-2xl border border-white/[0.04] bg-white/[0.005]">
+                    <div class="text-xs font-mono text-emerald-400 mb-4">02</div>
+                    <h3 class="text-base font-medium text-white mb-2">Design</h3>
+                    <p class="text-xs text-[#8E8E93]">Iterative layout structures and unified design tokens.</p>
+                </div>
+                <div class="p-6 rounded-2xl border border-white/[0.04] bg-white/[0.005]">
+                    <div class="text-xs font-mono text-emerald-400 mb-4">03</div>
+                    <h3 class="text-base font-medium text-white mb-2">Build</h3>
+                    <p class="text-xs text-[#8E8E93]">Production-grade development using modern syntax.</p>
+                </div>
+                <div class="p-6 rounded-2xl border border-white/[0.04] bg-white/[0.005]">
+                    <div class="text-xs font-mono text-emerald-400 mb-4">04</div>
+                    <h3 class="text-base font-medium text-white mb-2">Launch</h3>
+                    <p class="text-xs text-[#8E8E93]">Optimized deployment workflows and structural review.</p>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <script>
+        lucide.createIcons();
+    </script>
+</body>
+</html>
