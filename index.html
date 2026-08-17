@@ -450,7 +450,7 @@ footer{position:relative;z-index:1;padding:2rem 3rem;border-top:1px solid var(--
 <section id="projects"><div class="section-inner">
   <div class="projects-header">
     <div><div class="section-label" id="lbl-projects">Proyectos</div><h2 class="section-title" id="proj-title">Trabajo selecto</h2></div>
-    <span class="projects-count" id="proj-count">06 proyectos</span>
+    <span class="projects-count" id="proj-count">04 proyectos</span>
   </div>
   <div class="projects-grid">
 
@@ -492,44 +492,26 @@ footer{position:relative;z-index:1;padding:2rem 3rem;border-top:1px solid var(--
       </div>
     </div>
 
-    <!-- DOGOLAND CRM -->
-    <div class="project-card featured reveal">
-      <div class="proj-body">
+    <!-- DOGOLAND — CASO DE ESTUDIO -->
+    <div class="project-card reveal" style="grid-column:1/-1;padding:2.5rem 3rem">
+      <div style="display:flex;justify-content:space-between;align-items:flex-start;margin-bottom:2rem;flex-wrap:wrap;gap:1rem">
         <div>
-          <div class="live" id="dc-live">Fase 1 completada</div>
-          <div class="proj-tag" id="dc-tag">Salud Animal &middot; CRM &middot; SaaS</div>
-          <h3 class="proj-name" style="font-size:1.5rem">CRM Dogoland</h3>
-          <p class="proj-desc" id="dc-desc">Caja e Historia Clínica en un solo sistema: reemplaza el Excel y las carpetas físicas de la veterinaria con ventas, gastos, cuentas y pacientes con historial completo de consultas, accesible desde cualquier dispositivo.</p>
-          <div class="ba"><div class="ba-box hi" id="dc-ba1">✓ Fase 1 &middot; Dogoland<br>En producción</div><span class="ba-arr">→</span><div class="ba-box" id="dc-ba2">◈ Fase 2 &middot; Multi-clínica<br>En proceso</div></div>
+          <div style="display:flex;gap:.75rem;align-items:center;margin-bottom:.8rem;flex-wrap:wrap">
+            <div class="live" id="dl-live">3 productos en producción</div>
+            <span class="collab-tag" id="dl-collab">Cliente ancla</span>
+          </div>
+          <div class="proj-tag" id="dl-tag">Salud Animal &middot; Growth &middot; CRM &middot; Mobile</div>
+          <h3 class="proj-name" style="font-size:1.4rem">Dogoland</h3>
+          <p class="proj-desc" id="dl-desc" style="max-width:640px;margin-bottom:0">De una veterinaria sin presencia digital a un ecosistema completo: la web que convierte visitas en ventas, el CRM propio que reemplazó el Excel y las carpetas físicas, y la app donde sus clientes llevan el historial de sus mascotas al día.</p>
         </div>
-        <div class="proj-footer" style="margin-top:1.2rem"><div class="pill-row"><span class="pill">Supabase</span><span class="pill">JavaScript</span><span class="pill">Postgres</span></div><span class="proj-arrow">↗</span></div>
+        <div class="pill-row"><span class="pill">WordPress</span><span class="pill">Supabase</span><span class="pill">Adalo</span><span class="pill">CRO</span></div>
       </div>
-      <div class="proj-stats">
-        <div class="stat-block"><span class="stat-num">3400<span class="unit">+</span></span><span class="stat-lbl" id="dc-s1l">Movimientos migrados</span><span class="stat-sub" id="dc-s1s">Historial completo de Excel migrado sin pérdida de datos</span></div>
-        <div class="stat-block"><span class="stat-num">95<span class="unit"></span></span><span class="stat-lbl" id="dc-s2l">Pacientes digitalizados</span><span class="stat-sub" id="dc-s2s">Historias clínicas centralizadas, sin carpetas físicas</span></div>
-        <div class="stat-block"><span class="stat-num">2<span class="unit">fases</span></span><span class="stat-lbl" id="dc-s3l">Roadmap activo</span><span class="stat-sub" id="dc-s3s">De herramienta propia a CRM para veterinarias externas</span></div>
+      <div class="fl-grid">
+        <div class="fl-cell"><div class="fl-label" id="dp1-lbl">Fase 1 &middot; Web &amp; Growth</div><div class="fl-ba"><div class="ba-box" id="dp1-b1">Sin canal directo desde Google</div><span class="ba-arr" style="text-align:center">↓</span><div class="ba-box hi" id="dp1-b2">↑ WhatsApp &middot; ↑ Ventas</div></div></div>
+        <div class="fl-cell"><div class="fl-label" id="dp2-lbl">Fase 2 &middot; CRM interno (Caja + Historia Clínica)</div><div class="fl-ba"><div class="ba-box" id="dp2-b1">Excel + carpetas físicas dispersas</div><span class="ba-arr" style="text-align:center">↓</span><div class="ba-box hi" id="dp2-b2">✓ 3400+ registros migrados &middot; escalando a multi-clínica</div></div></div>
+        <div class="fl-cell"><div class="fl-label" id="dp3-lbl">Fase 3 &middot; App para clientes</div><div class="fl-ba"><div class="ba-box" id="dp3-b1">Sin registro digital de mascotas</div><span class="ba-arr" style="text-align:center">↓</span><div class="ba-box hi" id="dp3-b2">App activa &middot; vacunas, consultas y baños al día</div></div></div>
       </div>
-    </div>
-
-    <!-- DOGOAPP -->
-    <div class="project-card reveal">
-      <span class="proj-num">03</span>
-      <div class="live" id="dg-live">Activo con usuarios</div>
-      <div class="proj-tag" id="dg-tag">Salud Animal &middot; Mobile &middot; B2C + B2B</div>
-      <h3 class="proj-name" id="dg-name">DogoApp</h3>
-      <p class="proj-desc" id="dg-desc">App para que dueños de mascotas lleven registro de vacunas, desparasitaciones, consultas y baños. Las veterinarias acceden al historial de sus clientes. Historia clínica veterinaria en desarrollo.</p>
-      <div class="proj-footer"><div class="pill-row"><span class="pill">Mobile UX</span><span class="pill">Adalo</span><span class="pill">B2C + B2B</span></div><span class="proj-arrow">↗</span></div>
-    </div>
-
-    <!-- DOGOLAND -->
-    <div class="project-card reveal reveal-d1">
-      <span class="proj-num">04</span>
-      <div class="live" id="dl-live">Resultados medibles</div>
-      <div class="proj-tag" id="dl-tag">Marketing Digital &middot; Web &middot; Growth</div>
-      <h3 class="proj-name" id="dl-name">Dogoland Veterinaria</h3>
-      <p class="proj-desc" id="dl-desc">Web diseñada para un problema concreto: Google no permite WhatsApp en el perfil del negocio. La web convierte visitas orgánicas en mensajes directos, junto a optimización del perfil Google Business.</p>
-      <div class="ba"><div class="ba-box" id="dl-ba1">Sin canal directo desde Google</div><span class="ba-arr">→</span><div class="ba-box hi" id="dl-ba2">↑ WhatsApp &middot; ↑ Ventas</div></div>
-      <div class="proj-footer"><div class="pill-row"><span class="pill">WordPress</span><span class="pill">WooCommerce</span><span class="pill">CRO</span></div><span class="proj-arrow">↗</span></div>
+      <div class="proj-footer"><div style="font-size:.7rem;color:var(--muted)"><span id="dl-goal">Próxima fase:</span> <span style="color:var(--muted2)" id="dl-goals">CRM Dogoland evolucionando a producto multi-veterinaria</span></div><span class="proj-arrow">↗</span></div>
     </div>
 
     <!-- DISCORD -->
@@ -702,7 +684,7 @@ const T = {
     'f-bio2':'Me especializo en diseñar flujos intuitivos, estructurar bases de datos eficientes y desplegar aplicaciones robustas que impactan directamente en los resultados de tu negocio. Si buscas un socio tecnológico que entienda el mercado y ejecute con precisión, construyamos juntos.',
     'fs1':'Proyectos activos', 'fs2':'Clientes reales', 'fs3':'Años construyendo',
     'fl-li':'in LinkedIn', 'fl-em':'✉ contacto@flowgrid.com.co',
-    'lbl-projects':'Proyectos', 'proj-title':'Trabajo selecto', 'proj-count':'06 proyectos',
+    'lbl-projects':'Proyectos', 'proj-title':'Trabajo selecto', 'proj-count':'04 proyectos',
     'cc-live':'En producción', 'cc-tag':'Salud · Biomédico · SaaS',
     'cc-desc':'App para centralizar certificados de calibración de equipos biomédicos. Acceso multiplataforma desde cualquier lugar, eliminando carpetas físicas y archivos locales.',
     'cc-ba1':'📁 Carpetas físicas o archivos locales', 'cc-ba2':'☁ Base de datos accesible desde cualquier lugar',
@@ -715,17 +697,13 @@ const T = {
     'ai-s1l':'Manual indexado', 'ai-s1s':'Documentación completa disponible al instante',
     'ai-s2l':'Tiempo de respuesta', 'ai-s2s':'Vs. minutos de búsqueda manual',
     'ai-s3l':'Reducción operativa', 'ai-s3s':'Menor error humano en consultas críticas',
-    'dc-live':'Fase 1 completada', 'dc-tag':'Salud Animal · CRM · SaaS',
-    'dc-desc':'Caja e Historia Clínica en un solo sistema: reemplaza el Excel y las carpetas físicas de la veterinaria con ventas, gastos, cuentas y pacientes con historial completo de consultas, accesible desde cualquier dispositivo.',
-    'dc-ba1':'✓ Fase 1 · Dogoland — En producción', 'dc-ba2':'◈ Fase 2 · Multi-clínica — En proceso',
-    'dc-s1l':'Movimientos migrados', 'dc-s1s':'Historial completo de Excel migrado sin pérdida de datos',
-    'dc-s2l':'Pacientes digitalizados', 'dc-s2s':'Historias clínicas centralizadas, sin carpetas físicas',
-    'dc-s3l':'Roadmap activo', 'dc-s3s':'De herramienta propia a CRM para veterinarias externas',
-    'dg-live':'Activo con usuarios', 'dg-tag':'Salud Animal · Mobile · B2C + B2B',
-    'dg-desc':'App para que dueños de mascotas lleven registro de vacunas, desparasitaciones, consultas y baños. Las veterinarias acceden al historial de sus clientes. Historia clínica veterinaria en desarrollo.',
-    'dl-live':'Resultados medibles', 'dl-tag':'Marketing Digital · Web · Growth',
-    'dl-desc':'Web diseñada para un problema concreto: Google no permite WhatsApp en el perfil del negocio. La web convierte visitas orgánicas en mensajes directos, junto a optimización del perfil Google Business.',
-    'dl-ba1':'Sin canal directo desde Google', 'dl-ba2':'↑ WhatsApp · ↑ Ventas',
+    'dl-live':'3 productos en producción', 'dl-collab':'Cliente ancla',
+    'dl-tag':'Salud Animal · Growth · CRM · Mobile',
+    'dl-desc':'De una veterinaria sin presencia digital a un ecosistema completo: la web que convierte visitas en ventas, el CRM propio que reemplazó el Excel y las carpetas físicas, y la app donde sus clientes llevan el historial de sus mascotas al día.',
+    'dp1-lbl':'Fase 1 · Web & Growth', 'dp1-b1':'Sin canal directo desde Google', 'dp1-b2':'↑ WhatsApp · ↑ Ventas',
+    'dp2-lbl':'Fase 2 · CRM interno (Caja + Historia Clínica)', 'dp2-b1':'Excel + carpetas físicas dispersas', 'dp2-b2':'✓ 3400+ registros migrados · escalando a multi-clínica',
+    'dp3-lbl':'Fase 3 · App para clientes', 'dp3-b1':'Sin registro digital de mascotas', 'dp3-b2':'App activa · vacunas, consultas y baños al día',
+    'dl-goal':'Próxima fase:', 'dl-goals':'CRM Dogoland evolucionando a producto multi-veterinaria',
     'ds-live':'En desarrollo activo', 'ds-collab':'En colaboración',
     'ds-tag':'Automatización · Ops · Discord · APIs',
     'ds-desc':'Suite de automatizaciones que eliminan entradas manuales en operaciones de transporte. Tres flujos rediseñados que conectan sistemas sin fricción.',
@@ -755,8 +733,6 @@ const T = {
     'about-title':'Más que diseño.<br><em style="font-style:normal;color:var(--cyan)">Soluciones</em> que<br>transforman negocios.',
     'ct-title':'¿Tienes un<br>proyecto en<br><span style="color:var(--cyan)">mente?</span>',
     'ai-name':'Agente de IA Operativo',
-    'dg-name':'DogoApp',
-    'dl-name':'Dogoland Veterinaria',
     'ds-name':'Servidor Discord'
   },
   en: {
@@ -786,7 +762,7 @@ const T = {
     'f-bio2':"I specialize in designing intuitive flows, structuring efficient databases, and deploying robust applications that directly impact your business results. If you're looking for a tech partner who understands the market and executes with precision, let's build together.",
     'fs1':'Active projects', 'fs2':'Real clients', 'fs3':'Years building',
     'fl-li':'in LinkedIn', 'fl-em':'✉ contacto@flowgrid.com.co',
-    'lbl-projects':'Projects', 'proj-title':'Selected work', 'proj-count':'06 projects',
+    'lbl-projects':'Projects', 'proj-title':'Selected work', 'proj-count':'04 projects',
     'cc-live':'In production', 'cc-tag':'Health · Biomedical · SaaS',
     'cc-desc':'App to centralize calibration certificates for biomedical equipment. Multi-platform access from anywhere, eliminating physical folders and local files.',
     'cc-ba1':'📁 Physical folders or local files', 'cc-ba2':'☁ Cloud database accessible from anywhere',
@@ -799,17 +775,13 @@ const T = {
     'ai-s1l':'Indexed manual', 'ai-s1s':'Full documentation available instantly',
     'ai-s2l':'Response time', 'ai-s2s':'Vs. minutes of manual searching',
     'ai-s3l':'Operational reduction', 'ai-s3s':'Less human error on critical queries',
-    'dc-live':'Phase 1 complete', 'dc-tag':'Animal Health · CRM · SaaS',
-    'dc-desc':"Cash register and clinical records in one system: replaces the clinic's Excel sheets and physical folders with sales, expenses, accounts, and patients with full visit history, accessible from any device.",
-    'dc-ba1':'✓ Phase 1 · Dogoland — In production', 'dc-ba2':'◈ Phase 2 · Multi-clinic — In progress',
-    'dc-s1l':'Records migrated', 'dc-s1s':'Full Excel history migrated with zero data loss',
-    'dc-s2l':'Patients digitized', 'dc-s2s':'Clinical records centralized, no more physical folders',
-    'dc-s3l':'Active roadmap', 'dc-s3s':'From an in-house tool to a CRM for external clinics',
-    'dg-live':'Active with users', 'dg-tag':'Animal Health · Mobile · B2C + B2B',
-    'dg-desc':"App for pet owners to track vaccines, deworming, vet visits and grooming. Veterinary clinics access their clients' history. Clinical records module in development.",
-    'dl-live':'Measurable results', 'dl-tag':'Digital Marketing · Web · Growth',
-    'dl-desc':"Website designed to solve a specific problem: Google doesn't allow WhatsApp on the business profile. The site converts organic visits into direct messages, alongside Google Business optimization.",
-    'dl-ba1':'No direct channel from Google', 'dl-ba2':'↑ WhatsApp · ↑ Sales',
+    'dl-live':'3 products in production', 'dl-collab':'Anchor client',
+    'dl-tag':'Animal Health · Growth · CRM · Mobile',
+    'dl-desc':"From a vet clinic with no digital presence to a full ecosystem: the website that converts visits into sales, the in-house CRM that replaced Excel and physical folders, and the app where their clients keep their pets' records up to date.",
+    'dp1-lbl':'Phase 1 · Web & Growth', 'dp1-b1':'No direct channel from Google', 'dp1-b2':'↑ WhatsApp · ↑ Sales',
+    'dp2-lbl':'Phase 2 · Internal CRM (Cash Register + Clinical Records)', 'dp2-b1':'Excel + scattered physical folders', 'dp2-b2':'✓ 3,400+ records migrated · scaling to multi-clinic',
+    'dp3-lbl':'Phase 3 · Client-facing app', 'dp3-b1':'No digital pet records', 'dp3-b2':'Active app · vaccines, visits and grooming up to date',
+    'dl-goal':'Next phase:', 'dl-goals':'Dogoland CRM evolving into a multi-clinic product',
     'ds-live':'Active development', 'ds-collab':'In collaboration',
     'ds-tag':'Automation · Ops · Discord · APIs',
     'ds-desc':'Suite of automations eliminating manual entries in transport operations. Three redesigned workflows connecting systems without friction.',
@@ -839,8 +811,6 @@ const T = {
     'about-title':'More than design.<br><em style="font-style:normal;color:var(--cyan)">Solutions</em> that<br>transform businesses.',
     'ct-title':'Have a project<br>in<br><span style="color:var(--cyan)">mind?</span>',
     'ai-name':'Operational AI Agent',
-    'dg-name':'DogoApp',
-    'dl-name':'Dogoland Veterinaria',
     'ds-name':'Discord Server'
   }
 };
@@ -863,10 +833,9 @@ function applyLang(l) {
     'cc-s1l','cc-s1s','cc-s2l','cc-s2s','cc-s3l','cc-s3s',
     'ai-live','ai-name','ai-tag','ai-desc','ai-ba1','ai-ba2',
     'ai-s1l','ai-s1s','ai-s2l','ai-s2s','ai-s3l','ai-s3s',
-    'dc-live','dc-tag','dc-desc','dc-ba1','dc-ba2',
-    'dc-s1l','dc-s1s','dc-s2l','dc-s2s','dc-s3l','dc-s3s',
-    'dg-live','dg-name','dg-tag','dg-desc',
-    'dl-live','dl-name','dl-tag','dl-desc','dl-ba1','dl-ba2',
+    'dl-live','dl-collab','dl-tag','dl-desc',
+    'dp1-lbl','dp1-b1','dp1-b2','dp2-lbl','dp2-b1','dp2-b2','dp3-lbl','dp3-b1','dp3-b2',
+    'dl-goal','dl-goals',
     'ds-live','ds-collab','ds-name','ds-tag','ds-desc',
     'fl1-lbl','fl1-b1','fl1-b2','fl2-lbl','fl2-b1','fl2-b2','fl3-lbl','fl3-b1','fl3-b2',
     'ds-goal','ds-goals',
