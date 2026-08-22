@@ -155,6 +155,8 @@ section{position:relative;z-index:1}
 .project-card::before{content:'';position:absolute;top:0;left:0;right:0;height:2px;background:var(--cyan);transform:scaleX(0);transform-origin:left;transition:transform .3s ease}
 .project-card:hover{background:var(--surface-hover);border-color:var(--border-hover)}
 .project-card:hover::before{transform:scaleX(1)}
+.project-card::after{content:'';position:absolute;inset:0;background:radial-gradient(280px circle at var(--mx,50%) var(--my,50%),rgba(0,200,255,.10),transparent 70%);opacity:0;transition:opacity .3s ease;pointer-events:none}
+.project-card:hover::after{opacity:1}
 .project-card.featured{grid-column:1/-1;display:grid;grid-template-columns:1fr 1fr;gap:3rem;padding:2.5rem 3rem}
 .project-card.featured .proj-body{display:flex;flex-direction:column;justify-content:space-between}
 .project-card.featured .proj-stats{display:flex;flex-direction:column;gap:1.5rem;justify-content:center}
@@ -640,6 +642,15 @@ document.querySelectorAll('.hero-left > *').forEach((el,i) => {
     if (!ticking) { requestAnimationFrame(update); ticking = true; }
   }, { passive: true });
 })();
+
+// ── Project card spotlight (follows cursor on hover) ──
+document.querySelectorAll('.project-card').forEach(card => {
+  card.addEventListener('mousemove', e => {
+    const rect = card.getBoundingClientRect();
+    card.style.setProperty('--mx', `${e.clientX - rect.left}px`);
+    card.style.setProperty('--my', `${e.clientY - rect.top}px`);
+  });
+});
 
 // ── Mobile menu ──
 function toggleMenu() {
