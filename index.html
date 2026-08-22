@@ -86,8 +86,16 @@ section{position:relative;z-index:1}
 .obj{color:#FFCB6B}.op{color:#89DDFF}.var{color:var(--cyan)}.cm{color:#2E5070;font-style:italic}
 .code-status{background:#050C16;border-top:1px solid rgba(0,200,255,.07);padding:.6rem 1rem;display:flex;justify-content:space-between;align-items:center}
 .status-pill{font-size:.62rem;letter-spacing:.1em;text-transform:uppercase;color:#00E87A;display:flex;align-items:center;gap:.4rem}
-.status-pill::before{content:'';width:5px;height:5px;background:#00E87A;border-radius:50%}
+.status-pill::before{content:'';width:5px;height:5px;background:#00E87A;border-radius:50%;animation:pulse 1.8s ease-in-out infinite}
 .status-branch{font-size:.62rem;color:var(--muted)}
+
+/* Code hero: types in as you scroll up to the top, erases as you scroll down (see script) */
+@keyframes cursorBlink{0%,100%{opacity:1}50%{opacity:0}}
+.code-line{display:block;opacity:1}
+.code-cursor{display:inline-block;width:7px;height:1em;background:var(--cyan);margin-left:2px;vertical-align:text-bottom;visibility:hidden}
+@media (prefers-reduced-motion: no-preference){
+  .code-cursor{animation:cursorBlink 1s step-end infinite}
+}
 
 /* ABOUT */
 #about{border-top:1px solid var(--border)}
@@ -355,28 +363,7 @@ footer{position:relative;z-index:1;padding:2rem 3rem;border-top:1px solid var(--
     <div class="hero-img-wrap">
       <div class="code-window">
         <div class="code-titlebar"><div class="dot r"></div><div class="dot y"></div><div class="dot g"></div><span class="code-filename">certicloud / useEquipment.ts</span></div>
-        <div class="code-body"><pre style="font-family:'DM Mono',monospace;font-size:.76rem;line-height:1.85"><span class="cm"><span class="ln">01</span>// FlowGrid &middot; Certicloud</span>
-<span class="ln">02</span>
-<span class="kw"><span class="ln">03</span>import</span> <span class="obj">{ useState, useEffect }</span> <span class="kw">from</span> <span class="str">'react'</span>
-<span class="kw"><span class="ln">04</span>import</span> <span class="obj">{ supabase }</span> <span class="kw">from</span> <span class="str">'@/lib/supabase'</span>
-<span class="ln">05</span>
-<span class="kw"><span class="ln">06</span>export function</span> <span class="fn">useEquipment</span><span class="op">(</span><span class="var">orgId</span><span class="op">:</span> <span class="obj">string</span><span class="op">) {</span>
-<span class="kw"><span class="ln">07</span>  const</span> <span class="op">[</span><span class="var">certs</span>, <span class="var">setCerts</span><span class="op">] =</span> <span class="fn">useState</span><span class="op">([]);</span>
-<span class="kw"><span class="ln">08</span>  const</span> <span class="op">[</span><span class="var">loading</span>, <span class="var">setLoading</span><span class="op">] =</span> <span class="fn">useState</span><span class="op">(</span><span class="kw">true</span><span class="op">);</span>
-<span class="fn"><span class="ln">09</span>  useEffect</span><span class="op">(() => {</span>
-<span class="kw"><span class="ln">10</span>    async function</span> <span class="fn">load</span><span class="op">() {</span>
-<span class="kw"><span class="ln">11</span>      const</span> <span class="op">{</span> <span class="var">data</span> <span class="op">} =</span> <span class="kw">await</span> supabase
-<span class="ln">12</span>        .<span class="fn">from</span><span class="op">(</span><span class="str">'certificates'</span><span class="op">)</span>
-<span class="ln">13</span>        .<span class="fn">select</span><span class="op">(</span><span class="str">'*'</span><span class="op">)</span>
-<span class="ln">14</span>        .<span class="fn">eq</span><span class="op">(</span><span class="str">'org_id'</span>, <span class="var">orgId</span><span class="op">)</span>
-<span class="ln">15</span>        .<span class="fn">order</span><span class="op">(</span><span class="str">'expiry_date'</span><span class="op">);</span>
-<span class="fn"><span class="ln">16</span>      setCerts</span><span class="op">(</span><span class="var">data</span> <span class="op">?? []);</span>
-<span class="fn"><span class="ln">17</span>      setLoading</span><span class="op">(</span><span class="kw">false</span><span class="op">);</span>
-<span class="ln">18</span>    <span class="op">}</span>
-<span class="fn"><span class="ln">19</span>    load</span><span class="op">();</span>
-<span class="ln">20</span>  <span class="op">}, [</span><span class="var">orgId</span><span class="op">]);</span>
-<span class="kw"><span class="ln">21</span>  return</span> <span class="op">{</span> <span class="var">certs</span>, <span class="var">loading</span> <span class="op">};</span>
-<span class="ln">22</span><span class="op">}</span></pre></div>
+        <div class="code-body"><pre style="font-family:'DM Mono',monospace;font-size:.76rem;line-height:1.85"><span class="code-line"><span class="cm"><span class="ln">01</span>// FlowGrid &middot; Certicloud</span></span><span class="code-line"><span class="ln">02</span></span><span class="code-line"><span class="kw"><span class="ln">03</span>import</span> <span class="obj">{ useState, useEffect }</span> <span class="kw">from</span> <span class="str">'react'</span></span><span class="code-line"><span class="kw"><span class="ln">04</span>import</span> <span class="obj">{ supabase }</span> <span class="kw">from</span> <span class="str">'@/lib/supabase'</span></span><span class="code-line"><span class="ln">05</span></span><span class="code-line"><span class="kw"><span class="ln">06</span>export function</span> <span class="fn">useEquipment</span><span class="op">(</span><span class="var">orgId</span><span class="op">:</span> <span class="obj">string</span><span class="op">) {</span></span><span class="code-line"><span class="kw"><span class="ln">07</span>  const</span> <span class="op">[</span><span class="var">certs</span>, <span class="var">setCerts</span><span class="op">] =</span> <span class="fn">useState</span><span class="op">([]);</span></span><span class="code-line"><span class="kw"><span class="ln">08</span>  const</span> <span class="op">[</span><span class="var">loading</span>, <span class="var">setLoading</span><span class="op">] =</span> <span class="fn">useState</span><span class="op">(</span><span class="kw">true</span><span class="op">);</span></span><span class="code-line"><span class="fn"><span class="ln">09</span>  useEffect</span><span class="op">(() => {</span></span><span class="code-line"><span class="kw"><span class="ln">10</span>    async function</span> <span class="fn">load</span><span class="op">() {</span></span><span class="code-line"><span class="kw"><span class="ln">11</span>      const</span> <span class="op">{</span> <span class="var">data</span> <span class="op">} =</span> <span class="kw">await</span> supabase</span><span class="code-line"><span class="ln">12</span>        .<span class="fn">from</span><span class="op">(</span><span class="str">'certificates'</span><span class="op">)</span></span><span class="code-line"><span class="ln">13</span>        .<span class="fn">select</span><span class="op">(</span><span class="str">'*'</span><span class="op">)</span></span><span class="code-line"><span class="ln">14</span>        .<span class="fn">eq</span><span class="op">(</span><span class="str">'org_id'</span>, <span class="var">orgId</span><span class="op">)</span></span><span class="code-line"><span class="ln">15</span>        .<span class="fn">order</span><span class="op">(</span><span class="str">'expiry_date'</span><span class="op">);</span></span><span class="code-line"><span class="fn"><span class="ln">16</span>      setCerts</span><span class="op">(</span><span class="var">data</span> <span class="op">?? []);</span></span><span class="code-line"><span class="fn"><span class="ln">17</span>      setLoading</span><span class="op">(</span><span class="kw">false</span><span class="op">);</span></span><span class="code-line"><span class="ln">18</span>    <span class="op">}</span></span><span class="code-line"><span class="fn"><span class="ln">19</span>    load</span><span class="op">();</span></span><span class="code-line"><span class="ln">20</span>  <span class="op">}, [</span><span class="var">orgId</span><span class="op">]);</span></span><span class="code-line"><span class="kw"><span class="ln">21</span>  return</span> <span class="op">{</span> <span class="var">certs</span>, <span class="var">loading</span> <span class="op">};</span></span><span class="code-line"><span class="ln">22</span><span class="op">}</span><span class="code-cursor"></span></span></pre></div>
         <div class="code-status"><span class="status-pill">Running &middot; 3 clients connected</span><span class="status-branch">&#11015; main &middot; TypeScript</span></div>
       </div>
     </div>
@@ -618,6 +605,41 @@ document.querySelectorAll('.hero-left > *').forEach((el,i) => {
   el.style.transition=`opacity .8s ease ${i*.1}s, transform .8s ease ${i*.1}s`;
   setTimeout(() => { el.style.opacity='1'; el.style.transform='translateY(0)'; }, 80);
 });
+
+// ── Hero code: types in as you scroll up to the top, erases as you scroll down ──
+(function() {
+  const codeBody = document.querySelector('.code-body');
+  const hero = document.getElementById('hero');
+  if (!codeBody || !hero) return;
+  const lines = Array.from(codeBody.querySelectorAll('.code-line'));
+  const cursor = codeBody.querySelector('.code-cursor');
+  const total = lines.length;
+  const reduceMotion = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+
+  if (reduceMotion) {
+    lines.forEach(l => { l.style.opacity = '1'; });
+    if (cursor) cursor.style.visibility = 'visible';
+    return;
+  }
+
+  lines.forEach(l => { l.style.transition = 'opacity .18s ease'; });
+
+  let range = Math.min(hero.offsetHeight, 600);
+  window.addEventListener('resize', () => { range = Math.min(hero.offsetHeight, 600); }, { passive: true });
+
+  let ticking = false;
+  function update() {
+    ticking = false;
+    const progress = Math.max(0, Math.min(1, 1 - window.scrollY / range));
+    const revealed = Math.round(progress * total);
+    lines.forEach((l, i) => { l.style.opacity = i < revealed ? '1' : '0'; });
+    if (cursor) cursor.style.visibility = revealed === total ? 'visible' : 'hidden';
+  }
+  update();
+  window.addEventListener('scroll', () => {
+    if (!ticking) { requestAnimationFrame(update); ticking = true; }
+  }, { passive: true });
+})();
 
 // ── Mobile menu ──
 function toggleMenu() {
